@@ -1,0 +1,29 @@
+#carouselAesthetic {
+  max-width: 1200px; /* MÁS ANCHO */
+  margin: 40px auto;
+  border-radius: 24px; /* bordes un poquito más grandes */
+}
+
+.carousel-inner img {
+  height: 700px; /* MÁS ALTO */
+  object-fit: cover;
+  filter: brightness(92%);
+  transition: transform 0.6s ease, filter 0.4s ease;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.04); /* zoom un poco mayor */
+  filter: brightness(100%);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) brightness(200%);
+  width: 50px;   /* flechas más grandes */
+  height: 50px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 0.85;
+}

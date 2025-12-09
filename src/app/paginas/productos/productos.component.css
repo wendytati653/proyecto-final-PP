@@ -1,0 +1,67 @@
+.productos-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.buscador {
+  margin-bottom: 20px;
+}
+
+.buscador input {
+  padding: 8px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.productos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.producto-card {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.producto-imagen {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.precio {
+  font-weight: bold;
+  color: #333;
+}
+
+.disponible {
+  color: green;
+}
+
+.no-disponible {
+  color: red;
+}
+
+.botones button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.botones button:hover {
+  opacity: 0.9;
+}
+
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

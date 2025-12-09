@@ -1,0 +1,83 @@
+<div class="container mt-4">
+
+  <h2 class="mb-3">Carrito de compras</h2>
+
+  <div *ngIf="carrito.length > 0; else vacio">
+
+    <table class="table table-striped align-middle">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let item of carrito">
+          
+          <!-- Imagen -->
+          <td>
+            <img *ngIf="item.imagen"
+                 [src]="'http://localhost/api_proyecto/public/uploads/' + item.imagen"
+                 class="thumb" />
+          </td>
+
+          <!-- Nombre -->
+          <td>
+            <strong>{{ item.nombre }}</strong>
+          </td>
+
+          <!-- Precio -->
+          <td>$ {{ item.precio_unitario }}</td>
+
+          <!-- Cantidad (editable) -->
+          <td>
+            <input type="number"
+                   min="1"
+                   class="form-control"
+                   [value]="item.cantidad"
+                   (change)="cambiarCantidad(item.id_detalle_carrito, $event)">
+          </td>
+
+          <!-- Subtotal -->
+          <td>$ {{ item.subtotal }}</td>
+
+          <!-- Eliminar -->
+          <td>
+            <button class="btn btn-danger btn-sm"
+                    (click)="eliminar(item.id_detalle_carrito)">
+              Eliminar
+            </button>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="text-end mt-4">
+      <p>Subtotal: <strong>$ {{ total }}</strong></p>
+      <p>Envío: <strong>$ {{ envio }}</strong></p>
+      <p>Total: <strong>$ {{ total + envio }}</strong></p>
+
+      <button class="btn btn-outline-danger me-2" (click)="vaciarCarrito()">
+        Vaciar carrito
+      </button>
+
+      <button class="btn btn-primary" (click)="irACompra()">
+        Finalizar compra
+      </button>
+    </div>
+
+  </div>
+
+  <ng-template #vacio>
+    <div class="alert alert-info text-center">
+      Tu carrito está vacío.
+    </div>
+  </ng-template>
+
+</div>

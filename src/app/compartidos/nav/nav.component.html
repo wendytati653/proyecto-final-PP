@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-elegante">
+  <div class="container-fluid d-flex align-items-center">
+
+    <!-- logo -->
+    <a class="navbar-brand fw-bold logo me-4" routerLink="/inicio">
+     Carpinteria el tio
+    </a>
+
+    <!-- Boton responsive -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Link mas iconos -->
+    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
+
+      <!-- Links a la izquierda -->
+      <ul class="navbar-nav d-flex align-items-center" style="gap: 15px;">
+        <li class="nav-item"><a routerLink="/inicio" routerLinkActive="active" class="nav-link">Inicio</a></li>
+        <li class="nav-item"><a routerLink="/productos" routerLinkActive="active" class="nav-link">Productos</a></li>
+        <li class="nav-item"><a routerLink="/ofertas" routerLinkActive="active" class="nav-link">Novedades</a></li>
+        <li class="nav-item"><a routerLink="/contacto" routerLinkActive="active" class="nav-link">Contacto</a></li>
+        <li class="nav-item"><a routerLink="/nuestraempresa" routerLinkActive="active" class="nav-link">Nuestra Empresa</a></li>
+        <li class="nav-item"><a routerLink="/compras" routerLinkActive="active" class="nav-link">Historial</a></li>
+      </ul>
+
+      <!-- Iconos a la derecha-->
+      <div class="d-flex align-items-center">
+
+        <!-- Carrito -->
+        <a routerLink="/carrito" class="icono-nav position-relative me-3">
+          <i class="bi bi-bag"></i>
+          <span class="badge contador">{{ cantidadProductos }}</span>
+        </a>
+
+        <!-- Login / usuario-->
+        <ng-container *ngIf="authService.isLoggedIn(); else noLogin">
+          <span class="user-label me-3">{{ usuario?.nombre }}</span>
+          <button class="btn btn-logout" (click)="logout()">Salir</button>
+        </ng-container>
+        
+        <!-- ADMIN SOLO SI ES ADMIN -->
+        <li class="nav-item" *ngIf="usuario?.rol === 'admin'">
+          <a routerLink="/admin" routerLinkActive="active" class="nav-link text-warning fw-bold">
+            Admin
+          </a>
+        </li>
+
+        <ng-template #noLogin>
+          <a routerLink="/login" class="icono-nav fs-4">
+            <i class="bi bi-person"></i>
+          </a>
+        </ng-template>
+
+      </div>
+
+    </div>
+  </div>
+</nav>
