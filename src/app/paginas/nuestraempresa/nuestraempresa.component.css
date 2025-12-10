@@ -27,3 +27,56 @@
 .carousel-control-next:hover {
   opacity: 0.85;
 }
+/* Igual altura entre imagen y texto */
+.equal-height {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.equal-height > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagen */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Texto */
+.text-container {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  justify-content: center;
+}
+/* Tarjetas de reseñas */
+.card {
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+.stars {
+  color: #f5c518; /* color dorado como estrellas */
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+
+

@@ -1,42 +1,237 @@
-<div class="container my-5">
-  <h2 class="text-center mb-4">Carpinteria el tio</h2>
+<!DOCTYPE html>
+<html lang="es">
 
-  <div id="carouselAesthetic" class="carousel slide carousel-fade shadow-lg rounded-4 overflow-hidden"
-    data-bs-ride="carousel">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carpintería El Tío</title>
+</head>
 
-    <div class="carousel-inner">
+<body>
 
-      <div class="carousel-item active">
-        <img src="assets/1.webp" class="d-block w-100" alt="Foto 1">
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Carpinteria el tio</h2>
+
+    <!-- CAROUSEL -->
+    <div id="carouselAesthetic" class="carousel slide carousel-fade shadow-lg rounded-4 overflow-hidden"
+      data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/1.webp" class="d-block w-100" alt="Foto 1">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/2.jpg" class="d-block w-100" alt="Foto 2">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/3.jpg" class="d-block w-100" alt="Foto 3">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/4.avif" class="d-block w-100" alt="Foto 4">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/5.jpg" class="d-block w-100" alt="Foto 5">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/6.avif" class="d-block w-100" alt="Foto 6">
+        </div>
       </div>
 
-      <div class="carousel-item">
-        <img src="assets/2.jpg" class="d-block w-100" alt="Foto 2">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselAesthetic" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselAesthetic" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div> <!-- FIN DEL CONTENEDOR DEL CAROUSEL -->
+
+  <!-- SECCIÓN RESPONSIVE IMAGEN + TEXTO DEL MISMO TAMAÑO -->
+  <div class="container my-5">
+    <div class="row equal-height g-4">
+      <div class="col-12 col-md-6 image-container">
+        <img src="assets/7.jpg" alt="Imagen descriptiva">
       </div>
 
-      <div class="carousel-item">
-        <img src="assets/3.jpg" class="d-block w-100" alt="Foto 3">
-      </div>
-
-      <div class="carousel-item">
-        <img src="assets/4.avif" class="d-block w-100" alt="Foto 4">
-      </div>
-
-      <div class="carousel-item">
-        <img src="assets/5.jpg" class="d-block w-100" alt="Foto 5">
-      </div>
-
-      <div class="carousel-item">
-        <img src="assets/6.avif" class="d-block w-100" alt="Foto 6">
+      <div class="col-12 col-md-6 text-container d-flex">
+        <div>
+          <h4 class="fs-3 mb-2">CARPINTERIA EL TIO</h4>
+          <p class="fs-6 lh-lg">
+            En nuestro taller, cada mueble nace de una historia que comenzó hace años, cuando descubrimos que el diseño
+            y
+            la carpintería podían transformar espacios y emociones. Empezamos con herramientas simples, muchas ganas y
+            un sueño: crear piezas en MDF que fueran accesibles, duraderas y personalizadas para cada hogar.
+            Con el tiempo fuimos creciendo, aprendiendo y perfeccionando cada detalle, hasta convertirnos en
+            un equipo que ama lo que hace y que pone el corazón en cada corte, cada lijado y cada terminación.
+            Hoy, seguimos trabajando con la misma pasión del primer día, creyendo que un buen mueble no solo
+            se ve: se siente, se vive y acompaña historias nuevas.
+          </p>
+        </div>
       </div>
     </div>
-
-    <!-- Botones -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselAesthetic" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselAesthetic" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
   </div>
+
+  <!-- SECCIÓN DE RESEÑAS DE CLIENTES -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Reseñas de nuestros clientes</h2>
+    <div class="row g-4">
+
+      <!-- RESEÑAS EXISTENTES -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Juan Pérez</h5>
+            <p class="card-text">“Excelente servicio y calidad en cada mueble. ¡Recomendados 100%!.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">María Gómez</h5>
+            <p class="card-text">“Muy profesionales y atentos. Mis muebles llegaron perfectos y personalizados.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Carlos Rodríguez</h5>
+            <p class="card-text">“Quedé impresionado con el detalle y la terminación. Volveré a comprar sin dudas.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9734; &#9734;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Laura Martínez</h5>
+            <p class="card-text">“Muy buena atención y entrega rápida. Me encantó mi nuevo mueble.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Pedro Sánchez</h5>
+            <p class="card-text">“Los muebles son de excelente calidad. Cumplen con lo prometido.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Sofía López</h5>
+            <p class="card-text">“Encantada con mi mesa de comedor. Todo perfecto y hecho a medida.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Diego Torres</h5>
+            <p class="card-text">“Muy recomendable. El trabajo artesanal se nota en cada detalle.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Valentina Ruiz</h5>
+            <p class="card-text">“Excelente comunicación y entrega puntual. Muebles de gran calidad.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Matías Fernández</h5>
+            <p class="card-text">“Un servicio confiable y productos duraderos. Muy satisfecho.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9734; &#9734;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Camila Herrera</h5>
+            <p class="card-text">“Mi estantería quedó perfecta. El acabado y el diseño superaron mis expectativas.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Federico Morales</h5>
+            <p class="card-text">“Muy buena relación precio-calidad. Volveré a comprar sin dudas.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9734; &#9734;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Isabela Castillo</h5>
+            <p class="card-text">“El mobiliario llegó en perfecto estado y el diseño es hermoso.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Tomás Ramírez</h5>
+            <p class="card-text">“Trabajo impecable. Estoy muy satisfecho con mi compra.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9734; &#9734;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Lucía Navarro</h5>
+            <p class="card-text">“El acabado de los muebles es impecable y la atención al cliente excelente.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Ricardo Salazar</h5>
+            <p class="card-text">“Todo llegó en perfecto estado y los diseños son realmente hermosos.”</p>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
