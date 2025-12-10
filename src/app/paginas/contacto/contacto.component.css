@@ -1,0 +1,63 @@
+/* Contenedor centrado y más grande */
+.contact-wrapper {
+  width: 100%;
+  max-width: 700px; /* más ancho */
+  background-color: #f2f2f2;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulario moderno y espacioso */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-textarea {
+  resize: none;
+  height: 250px; /* cuadro más grande */
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  padding: 16px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-textarea:focus {
+  border-color: #a09c9c;
+  box-shadow: 0 0 15px rgba(160, 156, 156, 0.4);
+  outline: none;
+}
+
+.contact-input {
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  padding: 14px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+  border-color: #a09c9c;
+  box-shadow: 0 0 12px rgba(160, 156, 156, 0.4);
+  outline: none;
+}
+
+.contact-btn {
+  background-color: #a09c9c;
+  color: #333;
+  border: none;
+  border-radius: 15px;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #e6c645;
+  color: #62605d;
+}
