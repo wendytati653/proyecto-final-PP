@@ -1,0 +1,28 @@
+/* Footer compacto y estético */
+footer.footer {
+  background-color: #f2f2f2; /* gris clarito */
+  color: #333;
+  font-size: 0.9rem;
+}
+
+footer.footer h6 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+footer.footer ul li {
+  margin-bottom: 0.3rem;
+}
+
+.logo-footer {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Hover opcional en enlaces de contacto */
+footer.footer ul li:hover {
+  color: #f5c518;
+  cursor: pointer;
+}
+
+
