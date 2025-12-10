@@ -1,0 +1,71 @@
+/* Cuerpo de la página centrado */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center;     /* Centrado vertical */
+  background-color: #f5f5f5; /* Color de fondo opcional */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Contenedor del formulario */
+.conntainer {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Inputs */
+.conntainer .form-control {
+  border-radius: 10px;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+/* Efecto focus en los inputs */
+.conntainer .form-control:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Botón */
+.conntainer .btn-primary {
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.conntainer .btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Mensaje de error */
+.conntainer .text-danger {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Enlace de registro */
+.conntainer a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.conntainer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .conntainer {
+    padding: 20px;
+  }
+}

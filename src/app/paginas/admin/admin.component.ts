@@ -140,16 +140,38 @@ export class AdminComponent implements OnInit {
 
   // Elimina un producto del backend.
   eliminar(id: number) {
-    if (!confirm("¿Seguro de eliminar este producto?")) return;
+    if (!confirm("¿Seguro de desactivar este producto?")) return;
 
     this.productService.eliminarProducto(id).subscribe({
       next: () => {
-        alert("Producto eliminado");
+        alert("Producto desactivado");
         this.cargarProductos();
       },
-      error: () => alert("Error eliminando producto")
+      error: () => alert("Error al desactivar el producto")
     });
   }
+
+  // Desactiva un producto si ya no está en stock
+desactivarSiAgotado(producto: any) {
+  if (producto.stock > 0) {
+    alert("El producto aún tiene stock, no se puede desactivar.");
+    return;
+  }
+
+  if (!confirm("El producto está agotado. ¿Desea desactivarlo?")) return;
+
+  // método para actualizar el producto
+  const productoActualizado = { ...producto, activo: false };
+
+  this.productService.actualizarProducto(producto.id, productoActualizado).subscribe({
+    next: () => {
+      alert("Producto desactivado por falta de stock");
+      this.cargarProductos();
+    },
+    error: () => alert("Error al desactivar el producto")
+  });
+}
+
 
   // Resetea el formulario y vuelve al estado inicial.
   reset() {

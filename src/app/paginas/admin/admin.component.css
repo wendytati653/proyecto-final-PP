@@ -72,7 +72,7 @@
 }
 
 .limpiar {
-  background: #6c757d;
+  background: #dd76a4;
   color: white;
 }
 
@@ -109,5 +109,10 @@
 
 .eliminar {
   background: #d9534f;
+  color: white;
+}
+
+.desactivarSiAgotado{
+   background: #4d84c3;
   color: white;
 }
